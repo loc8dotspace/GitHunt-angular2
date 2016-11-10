@@ -146,9 +146,9 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
 
             this.offset++;
 
-            const newEntry: Comment[] = Object.assign({}, prev.entry, {
-              comments: [newComment, ...prev.entry.comments],
-              commentCount: (prev.entry.commentCount || 0) + 1
+            const newEntry: Comment[] = Object.assign({}, prev['entry'], {
+              comments: [newComment, ...prev['entry'].comments],
+              commentCount: (prev['entry'].commentCount || 0) + 1
             });
 
             return Object.assign({}, prev, {
